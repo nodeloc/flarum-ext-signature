@@ -54,9 +54,9 @@ class SignatureFormatter extends Formatter
 
         $configurator->tags->get("URL")->template =
             '<a href="{@url}" rel="{@rel}" target="_blank">
-    <xsl:copy-of select="@rel|@title"/>
-    <xsl:apply-templates/>
-</a>';
+                <xsl:copy-of select="@rel|@title"/>
+                <xsl:apply-templates/>
+            </a>';
 
         return $configurator;
     }

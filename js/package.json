@@ -4,6 +4,7 @@
   "prettier": "@flarum/prettier-config",
   "dependencies": {
     "@flarum/prettier-config": "^1.0.0",
+    "@gtdxyz/flarum-ext-signature": "file:",
     "flarum-tsconfig": "^1.0.2",
     "flarum-webpack-config": "^2.0.2",
     "mdarea": "^0.0.10",
@@ -11,8 +12,8 @@
     "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
-    "prettier": "^3.0.3",
     "flarum-tsconfig": "^1.0.2",
+    "prettier": "^3.0.3",
     "typescript": "^4.5.4",
     "typescript-coverage-report": "^0.6.1"
   },

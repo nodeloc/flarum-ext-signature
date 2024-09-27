@@ -7,10 +7,10 @@ import Signature from './components/Signature';
 export default function extendCommentPost() {
     extend(CommentPost.prototype, 'footerItems', function (items) {
       if (app.current.matches(DiscussionPage)) {
-        if (this.attrs.post.user?.() && this.attrs.post.number()===1) {
+        if (this.attrs.post.user?.() && app.session.user) {
           if (this.attrs.post.user().signature()) {
             const allowInlineEditing = app.forum.attribute('allowInlineEditing') || false;
-            
+
             items.add(
               'signature',
               [

@@ -32,9 +32,14 @@ export default class SignaturePage extends UserPage {
     this.user?.canEditSignature() &&
       items.add(
         'edit',
-        <Button className="Button" icon="fas fa-edit" onclick={() => this.onEdit()}>
-          {app.translator.trans('signature.forum.buttons.edit')}
-        </Button>
+        <div className="SignaturePage-editControl">
+          <Button className="Button" icon="fas fa-edit" onclick={() => this.onEdit()}>
+            {app.translator.trans('signature.forum.buttons.edit')}
+          </Button>
+          <label className="SignaturePage-editLabel">
+            请注意，为避免过度占用版面，Size标签将不会解析，H1,H2标签也不会解析，其它标签正常使用。
+          </label>
+        </div>
       );
 
     return items;
